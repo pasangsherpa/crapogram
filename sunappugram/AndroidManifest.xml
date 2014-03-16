@@ -26,6 +26,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.sunappugram.views.LogInActivity" >
+        </activity>
+        <activity android:name="com.sunappugram.views.SignUpActivity" >
+        </activity>
+        <activity android:name="com.sunappugram.views.DashboardActivity" >
+        </activity>
     </application>
 
 </manifest>
