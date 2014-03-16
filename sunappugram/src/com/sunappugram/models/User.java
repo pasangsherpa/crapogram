@@ -1,18 +1,17 @@
 package com.sunappugram.models;
 
 import com.parse.ParseClassName;
-import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 @ParseClassName("User")
-public class User extends ParseObject {
+public class User extends ParseUser {
 
-	public String id() {
+	public String getId() {
 		return getString("objectId");
 	}
 
-	public String username() {
+	public String getUsername() {
 		return getString("username");
 	}
 
-	
 }
