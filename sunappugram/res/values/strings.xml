@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="hello">Hello Sunappu!</string>
     <string name="app_name">SunappuGram</string>
+    <string name="login">Log In</string>
+    <string name="register">Register</string>
+
 </resources>

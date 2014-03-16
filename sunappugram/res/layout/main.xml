@@ -18,8 +18,8 @@
             android:layout_alignBottom="@+id/registerButton"
             android:layout_alignParentRight="true"
             android:layout_marginRight="46dp"
-            android:text="  Log In  "
-            android:textColor="#ff0000"
+            android:text="@string/login"
+            android:textColor="@color/red"
             android:textStyle="bold" />
 
         <Button
@@ -30,8 +30,8 @@
             android:layout_marginRight="27dp"
             android:layout_marginTop="185dp"
             android:layout_toLeftOf="@+id/loginButton"
-            android:text="Register"
-            android:textColor="#ff0000"
+            android:text="@string/register"
+            android:textColor="@color/red"
             android:textStyle="bold" />
 
     </RelativeLayout>
