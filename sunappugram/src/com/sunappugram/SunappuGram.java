@@ -12,8 +12,7 @@ public class SunappuGram extends Application {
 		super.onCreate();
 
 		// Add your initialization code here
-		Parse.initialize(this, "m7etrf98wPegyxE9o95X7a1DDhXEITYq5qMEOyNs",
-				"igd4TsaPsyjwlhXgl4xWoXfm5b6gccUwutI0U6m6");
+		  Parse.initialize(this, "hl7Imp1b54RPz4vUTAvgnDDDTIRQSv01m5jKKPJJ", "WceKZvnslF7RpO1eaNO6KnEXCa1JRoYAwYyYQ5Ah");
 
 		ParseUser.enableAutomaticUser();
 

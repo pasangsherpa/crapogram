@@ -21,7 +21,9 @@ public class SunappuGramActivity extends Activity {
 		ParseAnalytics.trackAppOpened(getIntent());
 		login = (Button) findViewById(R.id.loginButton);
 		login.setOnClickListener(new OnClickListener() {
-
+/**
+ * Click on the LogIn button in the Main view, got o login view to fill out username/email and password.
+ */
 			@Override
 			public void onClick(View v) {
 				Intent login_intent = new Intent(getApplicationContext(),
@@ -34,7 +36,9 @@ public class SunappuGramActivity extends Activity {
 
 		reg = (Button) findViewById(R.id.registerButton);
 		reg.setOnClickListener(new OnClickListener() {
-
+/**
+ * Click on the Register button, go to Register view.
+ */
 			@Override
 			public void onClick(View v) {
 				Intent login_intent1 = new Intent(getApplicationContext(),
