@@ -13,8 +13,8 @@ import com.sunappugram.R;
 
 public class DashboardActivity extends Activity {
 
-	private TextView firstName, lastName, email;
-	private Button logout, settings;
+	private TextView firstName, lastName;
+	private Button logout, settings, post;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -27,13 +27,12 @@ public class DashboardActivity extends Activity {
 
 			firstName = (TextView) findViewById(R.id.dashboard_firstname);
 			lastName = (TextView) findViewById(R.id.dashboard_lastname);
-			email = (TextView) findViewById(R.id.dashboard_email);
 			logout = (Button) findViewById(R.id.logout_button);
 			settings = (Button) findViewById(R.id.settings_button);
+			post = (Button) findViewById(R.id.post_button);
 
 			firstName.setText(currentUser.getString("firstName"));
 			lastName.setText(currentUser.getString("lastName"));
-			email.setText(currentUser.getEmail());
 
 		} else {
 			return;
@@ -55,16 +54,22 @@ public class DashboardActivity extends Activity {
 		});
 		
 		settings.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
 				startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
 				overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
 			}
-			
+		});
+		
+		post.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				//pop up some new window
+			}
 		});
 	}
 
+	@Override
 	public void onBackPressed() {
 		return;
 	}

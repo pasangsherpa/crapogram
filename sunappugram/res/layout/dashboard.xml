@@ -4,44 +4,69 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/dashboard_firstname"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.00"
-        android:text="@string/first_name" />
+        android:layout_weight="0.00" >
 
-    <TextView
-        android:id="@+id/dashboard_lastname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/last_name" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/dashboard_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.08"
-        android:text="@string/email" />
+            <TextView
+                android:id="@+id/dashboard_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:text="@string/first_name" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dashboard_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/last_name" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.00" >
-        
-    <Button
-        android:id="@+id/settings_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/settings" />
-    
-    <Button
-        android:id="@+id/logout_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/logout" />
-    
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/post_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" >
+
+        <Button
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings" />
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout" />
+
+    </LinearLayout>
 
 </LinearLayout>
