@@ -34,7 +34,7 @@ public class LogInActivity extends Activity {
 				String name = username.getText().toString();
 				String pw = password.getText().toString();
 
-				//copy from parse website API.
+				//copy from parse website Android/API/ User.
 				ParseUser.logInInBackground(name, pw, new LogInCallback() {
 					public void done(ParseUser user, ParseException e) {
 						if (user != null) {

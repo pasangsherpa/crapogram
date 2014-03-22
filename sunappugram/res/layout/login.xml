@@ -16,7 +16,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/password_login"
+        android:id="@+id/username_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/usrLabel"
@@ -26,7 +26,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/usrLabel"
+        android:id="@+id/username_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -38,7 +38,7 @@
     
 
     <EditText
-        android:id="@+id/username_login"
+        android:id="@+id/password_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/password"
