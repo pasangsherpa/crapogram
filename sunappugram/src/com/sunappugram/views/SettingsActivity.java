@@ -28,8 +28,8 @@ public class SettingsActivity extends Activity {
 
 		firstName = (EditText) findViewById(R.id.firstNameEditText);
 		lastName =  (EditText) findViewById(R.id.lastNameEditText);  
-		password = (EditText) findViewById(R.id.passWordTextView);
-		userName =  (EditText) findViewById(R.id.userNameTextView);
+		password = (EditText) findViewById(R.id.passwordEditText);
+		userName =  (EditText) findViewById(R.id.userNameEditText);
 		update = (Button) findViewById(R.id.updateButton);
 		validate();
 		update.setOnClickListener(new OnClickListener() {
