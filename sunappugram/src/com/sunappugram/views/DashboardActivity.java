@@ -2,11 +2,14 @@ package com.sunappugram.views;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.LinearGradient;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AbsoluteLayout;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.parse.ParseUser;
@@ -16,13 +19,17 @@ public class DashboardActivity extends Activity {
 
 	private TextView firstName;
 	private Button logout, settings, comment;
+	private LinearLayout dashboardContainer;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dashboard);
 
-
+		//set opacity.
+		dashboardContainer = (LinearLayout) findViewById(R.id.dashboard_container);
+		dashboardContainer.getBackground().setAlpha(100);
+		
 		ParseUser currentUser = ParseUser.getCurrentUser();
 		if (currentUser != null) {
 

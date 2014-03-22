@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.parse.ParseException;
@@ -16,7 +17,7 @@ import com.parse.SignUpCallback;
 import com.sunappugram.R;
 
 public class SignUpActivity extends Activity {
-
+	private LinearLayout signupContainer;
 	private Button signUp;
 	private EditText firstName, lastName, email, password;
 
@@ -24,6 +25,12 @@ public class SignUpActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.signup);
 
+
+		//set opacity.
+		signupContainer = (LinearLayout) findViewById(R.id.signup_container);
+		signupContainer.getBackground().setAlpha(100);
+		
+		//SignUp button and listener.
 		signUp = (Button) findViewById(R.id.signup_button);
 		signUp.setOnClickListener(new OnClickListener() {
 
