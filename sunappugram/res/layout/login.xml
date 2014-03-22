@@ -27,28 +27,6 @@
         android:ems="10"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/button_login"
-        style="@style/ButtonText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="182dp"
-        android:layout_y="294dp"
-        android:background="@drawable/button_green"
-        android:text="@string/login"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/button_cancel"
-        style="@style/ButtonText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="44dp"
-        android:layout_y="292dp"
-        android:background="@drawable/button_red"
-        android:text="@string/cancel"
-        android:textColor="@color/white" />
-
     <TextView
         android:id="@+id/user_label"
         android:layout_width="wrap_content"
@@ -71,5 +49,36 @@
         android:textColor="@color/dark_green"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/button_cancel"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="78dp"
+        android:layout_y="294dp"
+        android:background="@drawable/button_red"
+        android:text="@string/cancel"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button_login"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="184dp"
+        android:layout_y="296dp"
+        android:background="@drawable/button_green"
+        android:text="@string/login"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/retrieve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="133dp"
+        android:layout_y="370dp"
+        android:textColor="@color/white"
+        style="@style/ButtonText"
+        android:text="@string/retrieve" />
 
 </AbsoluteLayout>
