@@ -2,12 +2,9 @@ package com.sunappugram.views;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.LinearGradient;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,7 +15,7 @@ import com.sunappugram.R;
 public class DashboardActivity extends Activity {
 
 	private TextView firstName, comment;
-	private Button bLogout, bSettings, bComment;
+	private Button bLogout, bSettings;
 	private LinearLayout dashboardContainer;
 
 	@Override
@@ -68,14 +65,6 @@ public class DashboardActivity extends Activity {
 			public void onClick(View v) {
 				startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
 				overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
-			}
-		});
-
-		//comment button on click listener
-		bComment.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				//pop up some new window
 			}
 		});
 	}
