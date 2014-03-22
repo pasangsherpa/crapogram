@@ -62,7 +62,7 @@ public class LogInActivity extends Activity {
 							startActivity(dashboard_intent);
 						} else {
 							// Signup failed. Look at the ParseException to see what happened.
-							Toast.makeText(getApplicationContext(), e.getCode() + "", Toast.LENGTH_LONG).show();
+							Toast.makeText(getApplicationContext(), e.getCode() + "", Toast.LENGTH_SHORT).show();
 						}
 					}
 				});
