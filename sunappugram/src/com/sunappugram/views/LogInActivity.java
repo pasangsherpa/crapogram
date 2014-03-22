@@ -16,7 +16,7 @@ import com.parse.ParseUser;
 import com.sunappugram.R;
 
 public class LogInActivity extends Activity {
-	private Button login, cancel;
+	private Button login, cancel, retrieve;
 	private EditText username, password;
 	private AbsoluteLayout loginContainer;
 
@@ -29,12 +29,16 @@ public class LogInActivity extends Activity {
 
 		login = (Button) findViewById(R.id.button_login);
 		cancel = (Button) findViewById(R.id.button_cancel);
+		retrieve = (Button) findViewById(R.id.retrieve);
+		
+		
 		cancel.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				startActivity(new Intent(getApplicationContext(), SunappuGramActivity.class));
+				overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
 			}
 			
 		}); 
@@ -66,11 +70,17 @@ public class LogInActivity extends Activity {
 						}
 					}
 				});
-
 			}
-
 		});
-
+		retrieve.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent reset_password = new Intent(getApplicationContext(), ResetPasswordActivity.class);
+				startActivity(reset_password);
+			}
+		});
 	}
 	/**
 	 * check if username or password is null, if either is, give a warning.
