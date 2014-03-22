@@ -37,6 +37,9 @@
                    android:label="@string/settings_name">
             
         </activity>
+          
+         <activity android:name="com.sunappugram.views.ResetPasswordActivity" >
+        </activity>
        
     </application>
 
