@@ -16,7 +16,7 @@ import com.parse.ParseUser;
 import com.sunappugram.R;
 
 public class LogInActivity extends Activity {
-	private Button login;
+	private Button login, cancel;
 	private EditText username, password;
 	private AbsoluteLayout loginContainer;
 
@@ -28,6 +28,19 @@ public class LogInActivity extends Activity {
 		loginContainer.getBackground().setAlpha(100);
 
 		login = (Button) findViewById(R.id.button_login);
+		cancel = (Button) findViewById(R.id.button_cancel);
+		cancel.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(getApplicationContext(), LogInActivity.class));
+			}
+			
+		}); 
+	
+		
+		
 		login.setOnClickListener(new OnClickListener() {
 
 			@Override
