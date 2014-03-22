@@ -19,5 +19,7 @@
     <string name="last_name">Last Name</string>
     <string name="email">Email</string>
     <string name="signup_warning">Please fill up the required fields</string>
+    <string name="logout">LOGOUT</string>
+    <string name="settings">SETTINGS</string>
     <string name="settings_name">Settings</string>
 </resources>

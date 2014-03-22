@@ -51,6 +51,7 @@ public class SignUpActivity extends Activity {
 						if (e == null) {
 							Toast.makeText(getApplicationContext(),
 									"User signed up", Toast.LENGTH_LONG).show();
+							//intent is to open dashboard activity.
 							Intent dashboard_intent = new Intent(getApplicationContext(), DashboardActivity.class);
 							startActivity(dashboard_intent);
 							overridePendingTransition(R.anim.right_slide_out, R.anim.right_slide_in);
