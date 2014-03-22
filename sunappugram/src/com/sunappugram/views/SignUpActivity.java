@@ -36,7 +36,7 @@ public class SignUpActivity extends Activity {
 				password = (EditText) findViewById(R.id.signup_password);
 
 				validate();
-				Log.d("sunappugram", email.getText().toString());
+				Log.d("sunappugram", email.getText().toString());//the output test, debugging like println
 
 				ParseUser newUser = new ParseUser();
 				newUser.setUsername(email.getText().toString());
