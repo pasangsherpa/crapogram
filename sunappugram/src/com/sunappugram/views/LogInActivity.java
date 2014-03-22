@@ -34,7 +34,7 @@ public class LogInActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				startActivity(new Intent(getApplicationContext(), LogInActivity.class));
+				startActivity(new Intent(getApplicationContext(), SunappuGramActivity.class));
 			}
 			
 		}); 
@@ -62,8 +62,7 @@ public class LogInActivity extends Activity {
 							startActivity(dashboard_intent);
 						} else {
 							// Signup failed. Look at the ParseException to see what happened.
-							Toast.makeText(getApplicationContext(), "cant log in", Toast.LENGTH_LONG).show();
-
+							Toast.makeText(getApplicationContext(), e.getCode() + "", Toast.LENGTH_LONG).show();
 						}
 					}
 				});
