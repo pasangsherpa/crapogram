@@ -20,7 +20,7 @@ public class DashboardActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dashboard);
-		
+
 
 		ParseUser currentUser = ParseUser.getCurrentUser();
 		if (currentUser != null) {
@@ -37,10 +37,10 @@ public class DashboardActivity extends Activity {
 		} else {
 			return;
 		}
-		
+
 		createListeners();
 	}
-	
+
 	public void createListeners() {
 		logout.setOnClickListener(new OnClickListener() {
 			@Override
@@ -52,7 +52,7 @@ public class DashboardActivity extends Activity {
 				overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
 			}
 		});
-		
+
 		settings.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -69,8 +69,13 @@ public class DashboardActivity extends Activity {
 		});
 	}
 
+	/**
+	 * This method has to be here so that user after logging out can not go back to dashboard.
+	 * it is suppose to be just like this, @override.
+	 */
 	@Override
 	public void onBackPressed() {
+
 		return;
 	}
 

@@ -17,20 +17,20 @@ import com.parse.SignUpCallback;
 import com.sunappugram.R;
 
 public class SettingsActivity extends Activity {
-	
+
 	private Button update;
-	private EditText name, email, password,userName;
-	
+	private EditText firstName,lastName, email, password, userName;
+
 	/** Called when the activity is first created. */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.settings);
-		
-		name = (EditText) findViewById(R.id.user_name_view);
-		email = (EditText) findViewById(R.id.editText2);
-		password = (EditText) findViewById(R.id.editText3);
-		userName =  (EditText) findViewById(R.id.editText1);
-		update = (Button) findViewById(R.id.Button03);
+
+		firstName = (EditText) findViewById(R.id.firstNameEditText);
+		lastName =  (EditText) findViewById(R.id.lastNameEditText);  
+		password = (EditText) findViewById(R.id.passWordTextView);
+		userName =  (EditText) findViewById(R.id.userNameTextView);
+		update = (Button) findViewById(R.id.updateButton);
 		validate();
 		update.setOnClickListener(new OnClickListener() {
 
@@ -39,8 +39,10 @@ public class SettingsActivity extends Activity {
 
 				ParseUser currentUser = ParseUser.getCurrentUser();
 				if (currentUser != null) {
-					name.setText(currentUser.getString("firstName"));
+					firstName.setText(currentUser.getString("firstName"));
+					lastName.setText(currentUser.getString("lastName"));
 					password.setText(currentUser.getString("password"));
+					userName.setText(currentUser.getString("userName"));
 					email.setText(currentUser.getEmail());
 					startActivity(new Intent(getApplicationContext(), LogInActivity.class));
 
@@ -51,9 +53,9 @@ public class SettingsActivity extends Activity {
 		});
 	}
 	private boolean validate() {
-		if (name == null || email == null || userName == null
-				|| password == null || name.length() < 2
-				|| email.length() < 2
+		if (firstName == null || lastName == null || email == null || userName == null
+				|| password == null || firstName.length() < 2
+				|| lastName.length() < 2 || email.length() < 2
 				|| password.length() < 6) {
 			Toast.makeText(getApplicationContext(),
 					getString(R.string.signup_warning), Toast.LENGTH_LONG)
