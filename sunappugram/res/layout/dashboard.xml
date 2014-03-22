@@ -28,31 +28,88 @@
         android:layout_height="200dip"
         android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/post_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/comment" />
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/settings_button"
-            style="@style/ButtonText"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/comment_txtField"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/settings" />
+            android:ems="10"
+            android:inputType="textMultiLine" 
+			android:hint="@string/enter_comment">
+            <requestFocus />
+        </EditText>
 
-        <Button
-            android:id="@+id/logout_button"
-            style="@style/ButtonText"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/logout" />
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/settings_button"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:background="@drawable/button_green" />
+
+            <Button
+                android:id="@+id/logout_button"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logout" 
+                android:background="@drawable/button_red"/>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

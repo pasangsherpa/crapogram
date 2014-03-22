@@ -17,8 +17,8 @@ import com.sunappugram.R;
 
 public class DashboardActivity extends Activity {
 
-	private TextView firstName;
-	private Button logout, settings, comment;
+	private TextView firstName, comment;
+	private Button bLogout, bSettings, bComment;
 	private LinearLayout dashboardContainer;
 
 	@Override
@@ -34,9 +34,9 @@ public class DashboardActivity extends Activity {
 		if (currentUser != null) {
 
 			firstName = (TextView) findViewById(R.id.dashboard_firstname);
-			logout = (Button) findViewById(R.id.logout_button);
-			settings = (Button) findViewById(R.id.settings_button);
-			comment = (Button) findViewById(R.id.post_button);
+			comment = (TextView) findViewById(R.id.comment_txtField);
+			bLogout = (Button) findViewById(R.id.logout_button);
+			bSettings = (Button) findViewById(R.id.settings_button);
 
 //			Log.d("SunappuGram", currentUser.getString("firstName"));
 			firstName.setText(", " + currentUser.getString("firstName"));
@@ -53,7 +53,7 @@ public class DashboardActivity extends Activity {
 	 * */
 	public void setupListeners() {
 		//logout button on click listener
-		logout.setOnClickListener(new OnClickListener() {
+		bLogout.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				ParseUser.logOut();
@@ -63,7 +63,7 @@ public class DashboardActivity extends Activity {
 		});
 
 		//settings button on click listener
-		settings.setOnClickListener(new OnClickListener() {
+		bSettings.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
@@ -72,7 +72,7 @@ public class DashboardActivity extends Activity {
 		});
 
 		//comment button on click listener
-		comment.setOnClickListener(new OnClickListener() {
+		bComment.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				//pop up some new window

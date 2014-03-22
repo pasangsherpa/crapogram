@@ -26,5 +26,6 @@
     <string name="settings_name">Settings</string>
     <string name="comment">COMMENT</string>
     <string name="welcome">Welcome to SnappuGram !</string>
+    <string name="enter_comment">Enter a comment</string>
      <string name="cancel">Cancel</string>
 </resources>
