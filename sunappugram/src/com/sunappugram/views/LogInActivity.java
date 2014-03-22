@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,9 +18,14 @@ import com.sunappugram.R;
 public class LogInActivity extends Activity {
 	private Button login;
 	private EditText username, password;
+	private AbsoluteLayout loginContainer;
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
+		//set opacity.
+		loginContainer = (AbsoluteLayout) findViewById(R.id.login_container);
+		loginContainer.getBackground().setAlpha(300);
 
 		login = (Button) findViewById(R.id.button_login);
 		login.setOnClickListener(new OnClickListener() {
