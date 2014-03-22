@@ -43,16 +43,6 @@
         android:text="@string/first_name"
         android:textColor="@color/blue" />
 
-    <TextView
-        android:id="@+id/lastNameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/emailTextView"
-        android:layout_below="@+id/firstNameEditText"
-        android:layout_marginTop="16dp"
-        android:text="@string/last_name"
-        android:textColor="@color/blue" />
-
     <EditText
         android:id="@+id/lastNameEditText"
         android:layout_width="wrap_content"
@@ -67,7 +57,6 @@
         android:id="@+id/userNameEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/userNameTextView"
         android:layout_alignBottom="@+id/userNameTextView"
         android:layout_alignLeft="@+id/lastNameEditText"
         android:layout_alignRight="@+id/lastNameEditText"
@@ -78,7 +67,6 @@
         android:id="@+id/emailEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/emailTextView"
         android:layout_alignBottom="@+id/emailTextView"
         android:layout_alignLeft="@+id/userNameEditText"
         android:layout_alignRight="@+id/userNameEditText"
@@ -89,23 +77,11 @@
         android:id="@+id/passwordEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/passWordTextView"
         android:layout_alignBottom="@+id/passWordTextView"
         android:layout_alignLeft="@+id/emailEditText"
         android:layout_alignRight="@+id/emailEditText"
         android:ems="10"
         android:inputType="none|textPassword" />
-
-    <Button
-        android:id="@+id/updateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/passWordTextView"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/passwordEditText"
-        android:layout_marginTop="16dp"
-        android:text="@string/update"
-        android:textColor="@color/blue" />
 
     <EditText
         android:id="@+id/firstNameEditText"
@@ -119,5 +95,26 @@
 
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_marginTop="24dp"
+        android:text="@string/update"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/lastNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/emailTextView"
+        android:layout_below="@+id/firstNameEditText"
+        android:layout_marginTop="38dp"
+        android:text="@string/last_name"
+        android:textColor="@color/blue" />
 
 </RelativeLayout>

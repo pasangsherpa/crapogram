@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AbsoluteLayout;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -15,13 +16,31 @@ import com.parse.ParseUser;
 import com.sunappugram.R;
 
 public class LogInActivity extends Activity {
-	private Button login;
+	private Button login, cancel;
 	private EditText username, password;
+	private AbsoluteLayout loginContainer;
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
+		//set opacity.
+		loginContainer = (AbsoluteLayout) findViewById(R.id.login_container);
+		loginContainer.getBackground().setAlpha(300);
 
 		login = (Button) findViewById(R.id.button_login);
+		cancel = (Button) findViewById(R.id.button_cancel);
+		cancel.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(getApplicationContext(), LogInActivity.class));
+			}
+			
+		}); 
+	
+		
+		
 		login.setOnClickListener(new OnClickListener() {
 
 			@Override
