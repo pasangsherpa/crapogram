@@ -5,13 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AbsoluteLayout;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.parse.ParseAnalytics;
 import com.sunappugram.R;
 
 public class SunappuGramActivity extends Activity {
 	private Button login, reg;
+	private RelativeLayout mainContainer;
 
 	/** Called when the activity is first created. */
 	public void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,12 @@ public class SunappuGramActivity extends Activity {
 		setContentView(R.layout.main);
 
 		ParseAnalytics.trackAppOpened(getIntent());
+		
+		
+		//set opacity.
+				mainContainer = (RelativeLayout) findViewById(R.id.main_container);
+				mainContainer.getBackground().setAlpha(100);
+				
 		login = (Button) findViewById(R.id.loginButton);
 		login.setOnClickListener(new OnClickListener() {
 /**

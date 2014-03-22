@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.59"
-        android:background="@drawable/alice" >
+        android:background="@drawable/alice" 
+        android:id="@+id/main_container">"
 
         <Button
             android:id="@+id/loginButton"
@@ -19,7 +20,7 @@
             android:layout_alignBottom="@+id/registerButton"
             android:layout_alignParentRight="true"
             android:layout_marginRight="72dp"
-            android:background="@drawable/button_black"
+            android:background="@drawable/button_green"
             android:text="@string/login"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -33,7 +34,7 @@
             android:layout_below="@+id/welcome_label"
             android:layout_marginLeft="26dp"
             android:layout_marginTop="66dp"
-            android:background="@drawable/button_black"
+            android:background="@drawable/button_green"
             android:text="@string/register"
             android:textColor="@color/white"
             android:textStyle="bold" />

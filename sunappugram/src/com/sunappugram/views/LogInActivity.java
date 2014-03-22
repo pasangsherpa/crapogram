@@ -25,7 +25,7 @@ public class LogInActivity extends Activity {
 		setContentView(R.layout.login);
 		//set opacity.
 		loginContainer = (AbsoluteLayout) findViewById(R.id.login_container);
-		loginContainer.getBackground().setAlpha(300);
+		loginContainer.getBackground().setAlpha(100);
 
 		login = (Button) findViewById(R.id.button_login);
 		login.setOnClickListener(new OnClickListener() {
