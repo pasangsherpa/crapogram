@@ -41,11 +41,9 @@ public class SunappuGramActivity extends Activity {
  */
 			@Override
 			public void onClick(View v) {
-				Intent login_intent1 = new Intent(getApplicationContext(),
-						SignUpActivity.class);
-				startActivity(login_intent1);
-				overridePendingTransition(R.anim.right_slide_in,
-						R.anim.right_slide_out);
+				Intent reg_intent1 = new Intent(getApplicationContext(), SignUpActivity.class);
+				startActivity(reg_intent1);
+				overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
 			}
 		});
 	}
