@@ -11,5 +11,8 @@
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="email">Email</string>
+    <string name="cont">Continue</string>
     <string name="signup_warning">Please fill up the required fields</string>
+    <string name="cancel">Cancel</string>
+    <string name="example_email">12345@example.com</string>
 </resources>

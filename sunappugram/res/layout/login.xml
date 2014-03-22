@@ -48,7 +48,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/relativeLayout2"
@@ -64,5 +64,14 @@
         android:layout_centerHorizontal="true"
         android:text="@string/password"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/continue_button"
+        android:layout_toRightOf="@+id/userLabel"
+        android:text="forgot password?" />
 
 </RelativeLayout>
