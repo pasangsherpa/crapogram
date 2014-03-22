@@ -3,6 +3,7 @@ package com.sunappugram.views;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -13,8 +14,8 @@ import com.sunappugram.R;
 
 public class DashboardActivity extends Activity {
 
-	private TextView firstName, lastName;
-	private Button logout, settings, post;
+	private TextView firstName;
+	private Button logout, settings, comment;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -26,33 +27,35 @@ public class DashboardActivity extends Activity {
 		if (currentUser != null) {
 
 			firstName = (TextView) findViewById(R.id.dashboard_firstname);
-			lastName = (TextView) findViewById(R.id.dashboard_lastname);
 			logout = (Button) findViewById(R.id.logout_button);
 			settings = (Button) findViewById(R.id.settings_button);
-			post = (Button) findViewById(R.id.post_button);
+			comment = (Button) findViewById(R.id.post_button);
 
-			firstName.setText(currentUser.getString("firstName"));
-			lastName.setText(currentUser.getString("lastName"));
+//			Log.d("SunappuGram", currentUser.getString("firstName"));
+			firstName.setText(", " + currentUser.getString("firstName"));
 
 		} else {
 			return;
 		}
 
-		createListeners();
+		setupListeners();
 	}
-
-	public void createListeners() {
+	
+	/**
+	 * Sets up all OnClickListeners for all associated buttons
+	 * */
+	public void setupListeners() {
+		//logout button on click listener
 		logout.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//terminate all executing threads
-				//go back to loginView
 				ParseUser.logOut();
 				startActivity(new Intent(getApplicationContext(), SunappuGramActivity.class));
 				overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
 			}
 		});
 
+		//settings button on click listener
 		settings.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -60,8 +63,9 @@ public class DashboardActivity extends Activity {
 				overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
 			}
 		});
-		
-		post.setOnClickListener(new OnClickListener() {
+
+		//comment button on click listener
+		comment.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				//pop up some new window
@@ -75,7 +79,6 @@ public class DashboardActivity extends Activity {
 	 */
 	@Override
 	public void onBackPressed() {
-
 		return;
 	}
 
