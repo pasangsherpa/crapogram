@@ -47,5 +47,15 @@ public class SunappuGramActivity extends Activity {
 			}
 		});
 	}
+	
+	/**
+	 * This method has to be here so that user after logging out can not go back to dashboard.
+	 * it is suppose to be just like this, @override.
+	 */
+	@Override
+	public void onBackPressed() {
+
+		return;
+	}
 
 }
