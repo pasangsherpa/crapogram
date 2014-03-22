@@ -1,50 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/signup_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/redqueen"
     android:orientation="vertical" >
 
     <EditText
-        android:layout_marginTop="20dp"
         android:id="@+id/signup_firstname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/first_name" 
-        android:inputType="text">
+        android:layout_marginTop="20dp"
+        android:hint="@string/first_name"
+        android:inputType="text" >
 
         <requestFocus />
     </EditText>
 
     <EditText
-        android:layout_marginTop="20dp"
         android:id="@+id/signup_lastname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:hint="@string/last_name" />
+        android:layout_marginTop="20dp"
+        android:hint="@string/last_name"
+        android:inputType="text" />
 
     <EditText
-        android:layout_marginTop="20dp"
         android:id="@+id/signup_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:hint="@string/email" />
+        android:layout_marginTop="20dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
 
     <EditText
-        android:layout_marginTop="20dp"
         android:id="@+id/signup_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword" 
-        android:hint="@string/password"/>
+        android:layout_marginTop="20dp"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
 
     <Button
-        android:layout_marginTop="20dp"
         android:id="@+id/signup_button"
+        style="@style/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/signup" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_green"
+        android:text="@string/signup"
+        android:textColor="@color/white" />
 
 </LinearLayout>

@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello Sunappu!</string>
+    <string name="hello">Hello</string>
     <string name="app_name">SunappuGram</string>
+    <string name="name">Name</string>
+    <string name="user_name">Username</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_user_name">Username</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Password</string>
+    <string name="update">Update</string>
     <string name="username">Username or Email</string>
     <string name="password">Password</string>
     <string name="login">Log In</string>
@@ -13,6 +20,11 @@
     <string name="email">Email</string>
     <string name="cont">Continue</string>
     <string name="signup_warning">Please fill up the required fields</string>
-    <string name="cancel">Cancel</string>
     <string name="example_email">12345@example.com</string>
+    <string name="logout">LOGOUT</string>
+    <string name="settings">SETTINGS</string>
+    <string name="settings_name">Settings</string>
+    <string name="comment">COMMENT</string>
+    <string name="welcome">Welcome to SnappuGram !</string>
+     <string name="cancel">Cancel</string>
 </resources>

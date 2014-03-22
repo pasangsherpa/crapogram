@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/passWordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/userNameTextView"
+        android:layout_below="@+id/emailTextView"
+        android:layout_marginTop="28dp"
+        android:text="@string/password"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lastNameTextView"
+        android:layout_marginTop="31dp"
+        android:text="@string/user_name"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/passWordTextView"
+        android:layout_below="@+id/userNameTextView"
+        android:layout_marginTop="29dp"
+        android:text="@string/email"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/firstNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lastNameTextView"
+        android:layout_alignLeft="@+id/lastNameTextView"
+        android:text="@string/first_name"
+        android:textColor="@color/blue" />
+
+    <EditText
+        android:id="@+id/lastNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/userNameTextView"
+        android:layout_alignLeft="@+id/firstNameEditText"
+        android:layout_alignRight="@+id/firstNameEditText"
+        android:ems="10"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/userNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/userNameTextView"
+        android:layout_alignLeft="@+id/lastNameEditText"
+        android:layout_alignRight="@+id/lastNameEditText"
+        android:ems="10"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/emailTextView"
+        android:layout_alignLeft="@+id/userNameEditText"
+        android:layout_alignRight="@+id/userNameEditText"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/passWordTextView"
+        android:layout_alignLeft="@+id/emailEditText"
+        android:layout_alignRight="@+id/emailEditText"
+        android:ems="10"
+        android:inputType="none|textPassword" />
+
+    <EditText
+        android:id="@+id/firstNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/firstNameTextView"
+        android:ems="10"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_marginTop="24dp"
+        android:text="@string/update"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/lastNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/emailTextView"
+        android:layout_below="@+id/firstNameEditText"
+        android:layout_marginTop="38dp"
+        android:text="@string/last_name"
+        android:textColor="@color/blue" />
+
+</RelativeLayout>
