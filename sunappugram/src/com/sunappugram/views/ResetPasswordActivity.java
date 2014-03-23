@@ -32,8 +32,18 @@ public class ResetPasswordActivity extends Activity {
 		cancel = (Button) findViewById(R.id.cancel_button);
 		email = (EditText) findViewById(R.id.emailAddress);
 
-		cont.setOnClickListener(new OnClickListener() {
+		cancel.setOnClickListener(new OnClickListener(){
 
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(getApplicationContext(), SunappuGramActivity.class));
+				overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
+			}
+			
+		}); 
+	
+		cont.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				Log.d("ResetActivity", "test");
@@ -41,25 +51,21 @@ public class ResetPasswordActivity extends Activity {
 				ParseUser.requestPasswordResetInBackground(email.getText()
 						.toString().trim(), new RequestPasswordResetCallback() {
 					@SuppressWarnings("unused")
-					public void done(ParseUser user, ParseException e) {
-						if (user != null) {
-
-							Toast.makeText(getApplicationContext(),
-									"Check your Email address!",
-									Toast.LENGTH_LONG).show();
-							startActivity(new Intent(getApplicationContext(),
-									LogInActivity.class));
-						} else {
-
-							Toast.makeText(getApplicationContext(),
-									e.getCode() + "", Toast.LENGTH_LONG).show();
-						}
-					}
-
+					
+					
 					@Override
 					public void done(ParseException e) {
 						// TODO Auto-generated method stub
-
+					if(e!=null){
+						Toast.makeText(getApplicationContext(),
+						e.getCode() + "", Toast.LENGTH_LONG).show();
+					}else{
+						Toast.makeText(getApplicationContext(),
+								"Check your Email address!",
+								Toast.LENGTH_LONG).show();
+						startActivity(new Intent(getApplicationContext(),
+								LogInActivity.class));
+					}
 					}
 				});
 
