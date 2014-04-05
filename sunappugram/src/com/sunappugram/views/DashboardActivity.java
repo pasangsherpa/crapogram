@@ -15,7 +15,7 @@ import com.sunappugram.R;
 public class DashboardActivity extends Activity {
 
 	private TextView firstName, comment;
-	private Button bLogout, bSettings;
+	private Button bLogout, bSettings, bPost;
 	private LinearLayout dashboardContainer;
 
 	@Override
@@ -34,6 +34,7 @@ public class DashboardActivity extends Activity {
 			comment = (TextView) findViewById(R.id.comment_txtField);
 			bLogout = (Button) findViewById(R.id.logout_button);
 			bSettings = (Button) findViewById(R.id.settings_button);
+			bPost = (Button) findViewById(R.id.post_button);
 
 //			Log.d("SunappuGram", currentUser.getString("firstName"));
 			firstName.setText(", " + currentUser.getString("firstName"));

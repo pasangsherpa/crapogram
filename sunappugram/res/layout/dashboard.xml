@@ -28,51 +28,13 @@
         android:layout_height="200dip"
         android:orientation="vertical" >
 
-        <TabHost
-            android:background="@color/red"
-            android:id="@android:id/tabhost"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical" >
-
-                <TabWidget
-                    android:id="@android:id/tabs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-                </TabWidget>
-
-                <FrameLayout
-                    android:id="@android:id/tabcontent"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <LinearLayout
-                        android:id="@+id/tab1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical" >
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/tab2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical" >
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/tab3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical" >
-                    </LinearLayout>
-                </FrameLayout>
-            </LinearLayout>
-        </TabHost>
+        <TextView
+            android:id="@+id/Comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Comment"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        
     </LinearLayout>
 
     <LinearLayout
@@ -93,15 +55,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
+            android:orientation="horizontal" 
+            android:weightSum="3">
+            
             <Button
                 android:id="@+id/settings_button"
                 style="@style/ButtonText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/settings"
-                android:background="@drawable/button_green" />
+                android:background="@drawable/button_green"
+                android:layout_weight="1"/>
 
             <Button
                 android:id="@+id/logout_button"
@@ -109,7 +73,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/logout" 
-                android:background="@drawable/button_red"/>
+                android:background="@drawable/button_red"
+                android:layout_weight="1"/>
+            
+            <Button
+                android:id="@+id/post_button"
+                style="@style/ButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/post"
+                android:background="@drawable/button_green"
+                android:layout_weight="1"/>
         </LinearLayout>
     </LinearLayout>
 
