@@ -37,14 +37,12 @@ public class DashboardActivity extends Activity {
 
 //			Log.d("SunappuGram", currentUser.getString("firstName"));
 			firstName.setText(", " + currentUser.getString("firstName"));
-
 		} else {
 			return;
 		}
-
 		setupListeners();
 	}
-	
+
 	/**
 	 * Sets up all OnClickListeners for all associated buttons
 	 * */
