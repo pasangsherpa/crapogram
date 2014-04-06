@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.sunappugram.R;
 import com.sunappugram.models.Comment;
@@ -25,7 +23,7 @@ public class DashboardActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dashboard);
-
+		
 		//set opacity.
 		dashboardContainer = (LinearLayout) findViewById(R.id.dashboard_container);
 		dashboardContainer.getBackground().setAlpha(100);
