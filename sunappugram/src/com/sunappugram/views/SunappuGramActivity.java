@@ -22,8 +22,6 @@ public class SunappuGramActivity extends Activity {
 		setContentView(R.layout.main);
 
 		ParseAnalytics.trackAppOpened(getIntent());
-		
-		
 		//set opacity.
 				mainContainer = (RelativeLayout) findViewById(R.id.main_container);
 				mainContainer.getBackground().setAlpha(100);

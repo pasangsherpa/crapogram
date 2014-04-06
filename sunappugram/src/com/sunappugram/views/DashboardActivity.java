@@ -1,14 +1,20 @@
 package com.sunappugram.views;
 
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.sunappugram.R;
 import com.sunappugram.models.Comment;
@@ -30,7 +36,6 @@ public class DashboardActivity extends Activity {
 		
 		ParseUser currentUser = ParseUser.getCurrentUser();
 		if (currentUser != null) {
-
 			tFirstName = (TextView) findViewById(R.id.dashboard_firstname);
 			tComment = (TextView) findViewById(R.id.comment_txtField);
 			bLogout = (Button) findViewById(R.id.logout_button);
@@ -43,12 +48,26 @@ public class DashboardActivity extends Activity {
 			return;
 		}
 		setupListeners();
+		initializeDashBoardUI();
+	}
+	
+	private void initializeDashBoardUI() {
+		ParseQuery<Comment> test = Comment.getQuery();
+		test.findInBackground(new FindCallback<Comment>() {
+			@Override
+			public void done(List<Comment> comments, ParseException e) {
+				//update UI by whatever new comment was posted
+				for (Comment c : comments) {
+					Log.d("SunappuGram", c.getString("comment"));
+				}
+			}
+		});
 	}
 
 	/**
 	 * Sets up all OnClickListeners for all associated buttons
 	 * */
-	public void setupListeners() {
+	private void setupListeners() {
 		//logout button on click listener
 		bLogout.setOnClickListener(new OnClickListener() {
 			@Override
@@ -71,11 +90,12 @@ public class DashboardActivity extends Activity {
 		bPost.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//Create a Comment Object from Parse
-				
+				//Create a Comment Object from Parse and Post comment
+				//on database
 				Comment newComment = new Comment();
 				newComment.put("comment", tComment.getText().toString());
 				newComment.saveInBackground();
+				
 			}
 		});
 	}
