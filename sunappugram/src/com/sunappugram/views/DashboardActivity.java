@@ -3,13 +3,18 @@ package com.sunappugram.views;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.parse.FindCallback;
@@ -22,6 +27,7 @@ import com.sunappugram.models.Comment;
 public class DashboardActivity extends Activity {
 
 	private TextView tFirstName, tComment;
+	private ListView postsList;
 	private Button bLogout, bSettings, bPost;
 	private LinearLayout dashboardContainer;
 
@@ -41,7 +47,7 @@ public class DashboardActivity extends Activity {
 			bLogout = (Button) findViewById(R.id.logout_button);
 			bSettings = (Button) findViewById(R.id.settings_button);
 			bPost = (Button) findViewById(R.id.post_button);
-
+			postsList = (ListView) findViewById(R.id.posts_list);
 //			Log.d("SunappuGram", currentUser.getString("firstName"));
 			tFirstName.setText(", " + currentUser.getString("firstName"));
 		} else {
@@ -53,13 +59,12 @@ public class DashboardActivity extends Activity {
 	
 	private void initializeDashBoardUI() {
 		ParseQuery<Comment> test = Comment.getQuery();
+
 		test.findInBackground(new FindCallback<Comment>() {
 			@Override
 			public void done(List<Comment> comments, ParseException e) {
 				//update UI by whatever new comment was posted
-				for (Comment c : comments) {
-					Log.d("SunappuGram", c.getString("comment"));
-				}
+				postsList.setAdapter(new PostsAdapter(getApplicationContext(), comments));
 			}
 		});
 	}
@@ -95,7 +100,6 @@ public class DashboardActivity extends Activity {
 				Comment newComment = new Comment();
 				newComment.put("comment", tComment.getText().toString());
 				newComment.saveInBackground();
-				
 			}
 		});
 	}
@@ -107,6 +111,27 @@ public class DashboardActivity extends Activity {
 	@Override
 	public void onBackPressed() {
 		return;
+	}
+	
+	private class PostsAdapter extends ArrayAdapter<Comment>{
+		private final Context my_context;
+		private final List<Comment> my_values;
+		public PostsAdapter(final Context the_context, final List<Comment> the_values) {
+			super(the_context, R.layout.placeholder, the_values);
+			my_context = the_context;
+			my_values = the_values;
+		}
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			LayoutInflater inflater = 
+					(LayoutInflater) my_context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	 
+			View rowView = inflater.inflate(R.layout.placeholder, parent, false);
+			TextView textView = (TextView) rowView.findViewById(R.id.textplaceholder);
+			textView.setText(my_values.get(position).getString("comment"));
+
+			return rowView;
+		}
 	}
 
 }
