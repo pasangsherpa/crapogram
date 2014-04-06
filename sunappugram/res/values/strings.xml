@@ -30,4 +30,6 @@
      <string name="cancel">Cancel</string>
      <string name="retrieve">Forgot password ? </string>
      <string name="post">Post</string>
+          <string name="text_holder">This post is long time ago !</string>
+     
 </resources>
