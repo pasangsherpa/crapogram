@@ -9,12 +9,15 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.sunappugram.R;
+import com.sunappugram.models.Comment;
 
 public class DashboardActivity extends Activity {
 
-	private TextView firstName, comment;
+	private TextView tFirstName, tComment;
 	private Button bLogout, bSettings, bPost;
 	private LinearLayout dashboardContainer;
 
@@ -30,14 +33,14 @@ public class DashboardActivity extends Activity {
 		ParseUser currentUser = ParseUser.getCurrentUser();
 		if (currentUser != null) {
 
-			firstName = (TextView) findViewById(R.id.dashboard_firstname);
-			comment = (TextView) findViewById(R.id.comment_txtField);
+			tFirstName = (TextView) findViewById(R.id.dashboard_firstname);
+			tComment = (TextView) findViewById(R.id.comment_txtField);
 			bLogout = (Button) findViewById(R.id.logout_button);
 			bSettings = (Button) findViewById(R.id.settings_button);
 			bPost = (Button) findViewById(R.id.post_button);
 
 //			Log.d("SunappuGram", currentUser.getString("firstName"));
-			firstName.setText(", " + currentUser.getString("firstName"));
+			tFirstName.setText(", " + currentUser.getString("firstName"));
 		} else {
 			return;
 		}
@@ -64,6 +67,17 @@ public class DashboardActivity extends Activity {
 			public void onClick(View v) {
 				startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
 				overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
+			}
+		});
+		
+		bPost.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				//Create a Comment Object from Parse
+				
+				Comment newComment = new Comment();
+				newComment.put("comment", tComment.getText().toString());
+				newComment.saveInBackground();
 			}
 		});
 	}
