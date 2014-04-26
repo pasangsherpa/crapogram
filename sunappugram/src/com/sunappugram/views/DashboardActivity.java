@@ -31,6 +31,9 @@ public class DashboardActivity extends Activity {
 	private Button bLogout, bSettings, bPost;
 	private LinearLayout dashboardContainer;
 
+	private List<Comment> myComments;
+	private PostsAdapter myPostAdapter;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -64,7 +67,9 @@ public class DashboardActivity extends Activity {
 			@Override
 			public void done(List<Comment> comments, ParseException e) {
 				//update UI by whatever new comment was posted
-				postsList.setAdapter(new PostsAdapter(getApplicationContext(), comments));
+				myComments = comments;
+				myPostAdapter = new PostsAdapter(getApplicationContext(), myComments);
+				postsList.setAdapter(myPostAdapter);
 			}
 		});
 	}
@@ -100,6 +105,9 @@ public class DashboardActivity extends Activity {
 				Comment newComment = new Comment();
 				newComment.put("comment", tComment.getText().toString());
 				newComment.saveInBackground();
+				
+				myComments.add(newComment);
+				myPostAdapter.notifyDataSetChanged();
 			}
 		});
 	}
