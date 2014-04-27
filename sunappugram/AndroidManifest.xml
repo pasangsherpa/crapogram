@@ -28,7 +28,8 @@
         </activity>
         <activity android:name="com.sunappugram.views.LogInActivity" >
         </activity>
-        <activity android:name="com.sunappugram.views.SignUpActivity" >
+        <activity android:name="com.sunappugram.views.SignUpActivity" 
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name="com.sunappugram.views.DashboardActivity" >
             

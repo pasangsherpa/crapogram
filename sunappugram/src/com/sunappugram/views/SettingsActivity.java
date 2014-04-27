@@ -31,6 +31,7 @@ public class SettingsActivity extends Activity {
 		password = (EditText) findViewById(R.id.passwordEditText);
 		userName =  (EditText) findViewById(R.id.userNameEditText);
 		update = (Button) findViewById(R.id.updateButton);
+		email = (EditText) findViewById(R.id.emailEditText);
 		validate();
 		update.setOnClickListener(new OnClickListener() {
 
@@ -44,7 +45,7 @@ public class SettingsActivity extends Activity {
 					password.setText(currentUser.getString("password"));
 					userName.setText(currentUser.getString("userName"));
 					email.setText(currentUser.getEmail());
-					startActivity(new Intent(getApplicationContext(), LogInActivity.class));
+					startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
 
 				} else {
 					return;
