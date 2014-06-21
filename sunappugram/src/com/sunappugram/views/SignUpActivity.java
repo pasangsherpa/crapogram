@@ -30,7 +30,7 @@ public class SignUpActivity extends Activity {
 		signupContainer.getBackground().setAlpha(100);
 		
 		//cancel button and listener
-		cancel = (Button) findViewById(R.id.button_cancel);
+		cancel = (Button) findViewById(R.id.cancel_button);
 		cancel.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
