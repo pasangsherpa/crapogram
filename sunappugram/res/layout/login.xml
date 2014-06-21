@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_x="89dp"
         android:layout_y="45dp"
-        android:text="@string/enter_user_name"
+        android:text="@string/user_name"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/dark_green"
         android:textStyle="bold" />
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_x="86dp"
         android:layout_y="166dp"
-        android:text="@string/enter_password"
+        android:text="@string/password"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/dark_green"
         android:textStyle="bold" />

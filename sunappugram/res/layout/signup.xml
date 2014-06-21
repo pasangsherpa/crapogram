@@ -52,4 +52,14 @@
         android:text="@string/signup"
         android:textColor="@color/white" />
 
+    <Button
+        android:id="@+id/cancel_button"
+        style="@style/ButtonText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_red"
+        android:text="@string/cancel" />
+
 </LinearLayout>

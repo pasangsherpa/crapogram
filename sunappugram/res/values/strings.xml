@@ -3,33 +3,30 @@
 
     <string name="hello">Hello</string>
     <string name="app_name">SunappuGram</string>
-    <string name="name">Name</string>
+    <string name="name">NAME</string>
     <string name="user_name">Username</string>
-    <string name="enter_name">Enter Name</string>
-    <string name="enter_user_name">Username</string>
+    <string name="enter_name">Enter Username</string>
     <string name="enter_email">Enter Email</string>
-    <string name="enter_password">Password</string>
-    <string name="update">Update</string>
-    <string name="username">Username or Email</string>
     <string name="password">Password</string>
-    <string name="login">Log In</string>
-    <string name="register">Register</string>
-    <string name="signup">Sign Up</string>
+    <string name="update">UPDATE</string>
+    <string name="username">Username or Email</string>
+    <string name="login">LOG IN</string>
+    <string name="register">REGISTER</string>
+    <string name="signup">SIGN UP</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="email">Email</string>
-    <string name="cont">Continue</string>
+    <string name="cont">CONTINUE</string>
     <string name="signup_warning">Please fill up the required fields</string>
     <string name="example_email">12345@example.com</string>
     <string name="logout">LOGOUT</string>
     <string name="settings">SETTINGS</string>
-    <string name="settings_name">Settings</string>
     <string name="comment">COMMENT</string>
     <string name="welcome">Welcome to SnappuGram !</string>
     <string name="enter_comment">Enter a comment</string>
-     <string name="cancel">Cancel</string>
+     <string name="cancel">CANCEL</string>
      <string name="retrieve">Forgot password ? </string>
-     <string name="post">Post</string>
+     <string name="post">POST</string>
           <string name="text_holder">This post is long time ago !</string>
      
 </resources>

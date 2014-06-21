@@ -99,13 +99,14 @@
     <Button
         android:id="@+id/updateButton"
         android:layout_width="wrap_content"
+        style="@style/ButtonText"
+        android:background="@drawable/button_green"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/passwordEditText"
         android:layout_marginTop="24dp"
-        android:text="@string/update"
-        android:textColor="@color/blue" />
+        android:text="@string/update"/>
 
     <TextView
         android:id="@+id/lastNameTextView"
