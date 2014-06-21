@@ -18,17 +18,26 @@ import com.sunappugram.R;
 
 public class SignUpActivity extends Activity {
 	private LinearLayout signupContainer;
-	private Button signUp;
+	private Button signUp, cancel;
 	private EditText firstName, lastName, email, password;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.signup);
 
-
 		//set opacity.
 		signupContainer = (LinearLayout) findViewById(R.id.signup_container);
 		signupContainer.getBackground().setAlpha(100);
+		
+		//cancel button and listener
+		cancel = (Button) findViewById(R.id.button_cancel);
+		cancel.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(getApplicationContext(), SunappuGramActivity.class));
+				overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
+			}
+		});
 
 		//SignUp button and listener.
 		signUp = (Button) findViewById(R.id.signup_button);
